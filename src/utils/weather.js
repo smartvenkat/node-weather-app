@@ -10,7 +10,7 @@ const weather = ( latitude , longitude , callback ) => {
         } else if (body.error) {
             callback(' unable to find the location , please check the location!!!' , undefined)
         } else {
-            callback(undefined , body.current.temp_c +' celsius , its ' + body.current.condition.text + ' outside')
+            callback(undefined , ' time is ' +body.location.localtime +' and the temperature is ' +body.current.temp_c +'degree celsius , feels like ' + body.current.condition.text + ' outside')
         }
     })
 }
